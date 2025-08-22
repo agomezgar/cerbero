@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/bootstrap-5.3.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./css/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./css/jquery-3.6.1.min.js"></script> 
+    <script src="./css/popper.min.js"></script> 
+    <link rel="stylesheet" href="./css/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css ">
+
+    <script src="./css/jquery-ui/jquery-ui.js""></script>
+
+
+    <script>
+      $( function() {
+        $( "#fecha" ).datepicker({
+          dateFormat: "yy-mm-dd"
+        });
+      
+      } );
+      
+      </script>
+  
+      <title>Poner parte</title>
+  </head>
+  <body>    
+            <div id="barraBotones">
+        <button id="ponerParte">Poner parte</button>
+        <button id="consultarPartes">Consultar partes</button>
+    </div>
+    <div id="partesPrevios">
+      <h1 align="center">Partes previos</h1>
+
+    </div>
+    <div id="pantallaPrincipal">
+        <h1 align="center">Poner parte</h1>
+        <h2>Seleccione curso y alumna o alumno:</h2>
+        <select id="curso"></select>
+        <select id="nombreAlumno"></select>
+    </div>
+    <div id="pantallaDatos">
+      <div class="row p-6">
+        <div class="col-12">
+       <h2>Datos principales:</h2> 
+      </div>
+      </div>
+      <div class="row p-3">
+        <div class="col-6">   <div class="col-3"> Profesor: <input type="text" width="20" id="profesor"></div></div>
+      </div>
+ 
+      <div class="row p-3">
+        <div class="col-2">Fecha: <input type="text" width="20" id="fecha" class="form-control border border-primary" ></div>
+     
+      </div>
+
+      <div class="row p-3">
+        <div class="col-2">
+        Hora: <input type="text" id="hora">
+        </div>
+      </div>
+      <div class="row p-3">
+        <div class="col-2">Parte leve: <input type="text" id="parteLeve">Parte grave: <input type="text" id="parteGrave"></div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row p-3">
+        <div class="col-3">Se deriva al aula de convivencia<input type="checkbox" id="convivencia">  </div>
+        <div class="col-3"></div></div>
+      
+      <div class="row p-3">
+        <div class="col-6">
+          <h2 align="center">Tipo de falta leve</h2>
+        </div>
+      </div>
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="faltaAsistencia"> Falta de asistencia o puntualidad injustificada.
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="desconsideracion"> Desconsideración contra miembros de la comunidad escolar.
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="interrumpeClase"> Interrupción del desarrollo normal de las clases.
+            </div>
+      </div>
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="alteraActividades"> Alteración del desarrollo normal de las actividades del centro.
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="conductasImpropias"> Conductas impropias en un centro educativo.
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="indisciplina"> Actos de indisciplina contra miembros de la comunidad escolar.
+            </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="deterioroClase"> El deterioro no grave, causado intencionadamente.
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="deterioroPropiedades"> El deterioro de propiedades y del material personal del profesorado o de compañeros.
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="usaAscensor"> El uso inadecuado o sin autorización del ascensor.
+            </div>
+      </div>
+
+      
+      <div class="row p-3">
+        <div class="col-6">
+          <h2 align="center">Tipo de falta grave</h2>
+        </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="actoInjustificado"> Los actos injustificados que perturben gravemente el normal desarrollo de las actividades del Centro. 
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="indisciplinaGrave"> Los actos de indisciplina, injuria u ofensas graves contra los miembros de la comunidad educativa. 
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="perjuicioSalud"> Las actuaciones perjudiciales para la salud y la integridad personal de los miembros de la comunidad educativa del Centro, o la incitación a las mismas.
+            </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="agresionGrave"> La agresión grave física o moral contra miembros de la comunidad educativa o la discriminación grave.
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="suplantacion"> La suplantación de personalidad en actos de la vida docente y la falsificación o sustracción de documentos académico. 
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="danyoGrave"> Los daños graves causados por uso indebido o intencionadamente en los locales, material o documentación del Centro o en los bienes de otros miembros de la comunidad educativa.
+            </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="racista"> La exhibición de símbolos racistas, que inciten a la violencia, o de emblemas que atenten contra la dignidad de las personas y los derechos humanos.
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="reiteracion"> La reiteración, en un mismo curso escolar, de conductas contrarias a las normas de convivencia del Centro. 
+        </div>
+          <div class="col-2">
+            <input type="checkbox" id="incumplimiento"> El incumplimiento de las sanciones impuestas.
+            </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-2">
+          <input type="checkbox" id="abandonaCentro"> Abandonar el recinto escolar en horario lectivo sin permiso del Equipo Directivo y/o sin autorización de los padres o tutores legales. 
+        </div>
+        <div class="col-2">
+          <input type="checkbox" id="usaMovil"> Utilizar el teléfono móvil o dispositivo similar para tomar fotografías o grabar vídeos de cualquier miembro de la comunidad educativa, salvo que se haga con su consentimiento y con autorización del profesor/a para el uso de su asignatura.
+        </div>
+          <div class="col-2">
+            <input type="checkbox" id="movilExamen"> El uso del móvil o dispositivo similar durante la realización de exámenes o pruebas de evaluación. 
+            </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-3">Breve descripción de los hechos: </div>
+      </div>
+      <div class="row p-3">
+        <div class="col-6"><textarea rows="5" id="descripcion" style="min-width: 100%"></textarea></div>
+     <div class="col-6"><h3 align="center">Grabar</h3><br><p align="center"><i class="fa fa-floppy-o fa-5x"id="grabar"></i></p></div>
+      </div>
+
+    </div>
+</div>
+ 
+
+  </body>
+  <script src="../js/ponerParte.js"></script>
+
+</html>
+

@@ -1,0 +1,7 @@
+{
+    "host":"tuHost",
+    "user":"tuUser",
+    "password":"esObvio",
+    "database":"tuBase",
+    "timezone":"utc"
+}
